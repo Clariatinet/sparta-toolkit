@@ -4,7 +4,8 @@ import { addNumber } from './redux/modules/counterSlice';
 import { minusNumber } from './redux/modules/counterSlice';
 
 const App = () => {
-  const counter = useSelector((state) => state.counter);
+  const counter = useSelector((state) => state.counter.number);
+  console.log(counter);
   const dispatch = useDispatch();
   const [number, setNumber] = useState(0);
   const onChangeHandler = (event) => {

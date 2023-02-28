@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addNumber } from './redux/modules/counterSlice';
 import { minusNumber } from './redux/modules/counterSlice';
+import { __addNumber } from './redux/modules/counterSlice';
 
 const App = () => {
   const counter = useSelector((state) => state.counter.number);
@@ -12,7 +12,7 @@ const App = () => {
     setNumber(event.target.value);
   };
   const onClickAddNumberHandler = () => {
-    return dispatch(addNumber(number));
+    return dispatch(__addNumber(number));
   };
   const onClickMinusNumberHandler = () => {
     return dispatch(minusNumber(number));
